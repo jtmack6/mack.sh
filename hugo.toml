@@ -1,3 +1,76 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://www.mack.sh/"
+languageCode = "en-us"
+title = "mack.sh"
+theme = "hugo-profile"
+
+[params]
+  title = "mack.sh"
+  description = "Personal website and blog"
+  favicon = "/favicon.ico"
+  
+  # Theme features
+  darkMode = true
+  
+  [params.home]
+    # Profile section
+    [params.home.profile]
+      enable = true
+      name = "J.T. Mack"
+      subtitle = "Systems Engineer"
+      content = "Experienced systems engineer focused on FreeBSD, Linux, and cloud infrastructure"
+      image = "/images/profile.jpg"
+      
+      # Social links
+      [params.home.profile.social]
+        github = "jtmack6"
+        email = "your-email@mack.sh"
+        # Add other social links as needed
+        
+    # About section  
+    [params.home.about]
+      enable = true
+      title = "About Me"
+      content = """
+      Hi there! As a systems engineer with expertise in FreeBSD, Linux, networking, and systems administration,
+      I specialize in building and maintaining robust infrastructure solutions.
+      """
+      skills = [
+        "Systems Administration",
+        "FreeBSD",
+        "Linux",
+        "Cloud Infrastructure",
+        "Network Engineering",
+        "Security"
+      ]
+
+    # Experience section
+    [params.home.experience]
+      enable = true
+      title = "Experience"
+      items = [
+        [
+          "Systems Engineer",
+          "Current Role",
+          "2020-Present",
+          "Infrastructure and systems administration"
+        ]
+      ]
+
+# Navigation menu
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 1
+  [[menu.main]]
+    name = "Resume"
+    url = "/#resume"
+    weight = 2
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/#portfolio"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 4
